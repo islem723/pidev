@@ -1,0 +1,33 @@
+{% extends "base-back.html.twig" %}
+
+{% block body %}
+
+<title>affich list  des entrainements</title>
+</head>
+<body>
+<h1> LISTE DES Entrainements</h1>
+<table border="1">
+
+            <tr>
+                <td>Id</td>
+                <td>videotuto</td>
+                <td>descriptiontuto</td>
+                <td>titre</td>
+
+            </tr>
+
+            <tr  {% for Entrainement in Entrainement %} >
+                <td>{{ Entrainement.id }}</td>
+                <td>{{ Entrainement.videotuto}}</td>
+                <td>{{ Entrainement.descriptiontuto}}</td>
+                <td>{{ Entrainement.titre}}</td>
+                <td><a href="{{ path('updatee',{'id':Entrainement.id}) }}">Update</a></td>
+                <td><a href="{{ path('d1',{'id':Entrainement.id}) }}">Delete</a></td>
+
+
+            </tr{% endfor %}>
+        </table>
+
+    </body>
+    </html>
+{% endblock %}

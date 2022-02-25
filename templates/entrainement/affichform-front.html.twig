@@ -1,0 +1,54 @@
+{% extends "base-front.html.twig" %}
+
+
+    {%block home%} {% endblock%}
+    {% block landing %} {% endblock %}
+    {% block tournament%}{% endblock%}
+    {% block pro%}{% endblock%}
+    {% block entrainement %} active {% endblock %}
+    {% block game %} {% endblock %}
+    {% block blog%}{% endblock %}
+    {% block store%}{% endblock %}
+    {% block script %}{% endblock %}
+{% block body %}
+    <div class="container">
+    <div>
+    <title>liste  des Entrainements</title>
+
+    </head>
+    <body>
+    <h1> LISTE DES Entrainements</h1>
+    <table border="1">
+
+        <tr>
+            <td>Id</td>
+            <td>videotuto</td>
+            <td>descriptiontuto</td>
+            <td>titre</td>
+
+        </tr>
+
+        <tr  {% for Entrainement in Entrainement %} >
+            <td>{{ Entrainement.id }}</td>
+            <td>{{ Entrainement.videotuto}}</td>
+            <td>{{ Entrainement.descriptiontuto}}</td>
+            <td>{{ Entrainement.titre}}</td>
+
+
+
+        </tr{% endfor %}>
+    </table>
+    <div class="nk-gap-2 d-none d-lg-block"></div>
+    <div class="nk-gap-2 d-none d-lg-block"></div>
+    <div class="nk-gap-2 d-none d-lg-block"></div>
+    <div class="nk-gap-2 d-none d-lg-block"></div>
+    <div class="nk-gap-2 d-none d-lg-block"></div>
+    <div class="nk-gap-2 d-none d-lg-block"></div>
+    <div class="nk-gap-2 d-none d-lg-block"></div>
+    <div class="nk-gap-2 d-none d-lg-block"></div>
+    <div class="nk-gap-2 d-none d-lg-block"></div>
+    <div class="nk-gap-2 d-none d-lg-block"></div>
+    <div class="nk-gap-2 d-none d-lg-block"></div>
+    <div class="nk-gap-2 d-none d-lg-block"></div>
+    </div>
+{% endblock %}
